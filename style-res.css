@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+  background-color: #F77F00;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  background-color: #FFB05C;
+  padding: 2rem;
+  border-radius: 1rem;
+  min-height: 45vh;
+  width: 100%;
+  max-width: 420px; /* limits container width */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  background: linear-gradient(45deg, #8a2387, #e94057, #f27121);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+form {
+  margin: 2rem 0 1rem 0;
+}
+
+form select,
+form button,
+form input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 0.75rem;
+}
+
+form input {
+  border: 1px solid lightgray;
+  height: 3rem;
+  font-size: 1rem;
+  padding-left: 0.5rem;
+  background-color: bisque;
+}
+
+.dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.dropdown i {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.swap-icon {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.swap-icon:hover {
+  transform: rotate(180deg);
+}
+
+.select-container img {
+  max-width: 2rem;
+}
+
+.select-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  border-radius: 0.5rem;
+  border: 1px solid lightgray;
+}
+
+.select-container select {
+  font-size: 1rem;
+  width: auto;
+  background-color: bisque;
+}
+
+.msg {
+  margin: 2rem 0 2rem 0;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+form button {
+  height: 3rem;
+  background-color: #734B5E;
+  color: #fff;
+  font-size: 1.15rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+form button:hover {
+  opacity: 0.8;
+}
+
+/* ✅ Responsive Media Query */
+@media (max-width: 480px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .dropdown {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .select-container {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+  }
+
+  form input {
+    font-size: 0.95rem;
+  }
+
+  form button {
+    font-size: 1rem;
+  }
+}
+
+/* for dark mode */
+
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.theme-btn {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  color: #fff;
+}
+
+.theme-btn:hover {
+  transform: rotate(20deg);
+}
+
+/* Dark Mode Theme */
+body.dark {
+  background-color: #1e1e1e;
+  color: #eaeaea;
+}
+
+body.dark .container {
+  background-color: #2c2c2c;
+}
+
+body.dark input,
+body.dark select {
+  background-color: #3a3a3a;
+  color: #eaeaea;
+  border: 1px solid #555;
+}
+
+body.dark form button {
+  background-color: #555;
+}
+
+body.dark .msg {
+  color: #fff;
+}
+
+body.dark .theme-btn {
+  color: #f5c518; /* sun yellow */
+}
